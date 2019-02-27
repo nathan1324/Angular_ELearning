@@ -5,7 +5,12 @@ import { CourseChapterComponent } from './course-chapter/course-chapter.componen
 import { ChapterSectionComponent } from './Course-Chapter/chapter-section/chapter-section.component';
 
 @NgModule({
-  declarations: [CourseComponent, CourseChapterComponent, ChapterSectionComponent],
+  declarations: 
+  [
+    CourseComponent, 
+    CourseChapterComponent, 
+    ChapterSectionComponent
+  ],
   imports: [
     CommonModule
   ]
