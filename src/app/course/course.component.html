@@ -63,22 +63,24 @@
               </button>
               <button class="btn btn-outline-primary"
                 style="width:150px"
-                *ngIf="!displayRegisterLink">
+                *ngIf="!displayRegisterLink"
+                [routerLink]="['/login']">
                 Login to Register
               </button>
             </td>
             <td>
-                <button class="btn btn-outline-primary"
-                  style="width:100px"
-                  *ngIf="displayQuizLink">
-                  Take Quiz
-                </button>
-                <button class="btn btn-outline-primary"
-                  style="width:150"
-                  *ngIf="!displayQuizLink">
-                  Registeration Required
-                </button>
-              </td>
+              <button class="btn btn-outline-primary"
+                style="width:100px"
+                *ngIf="displayQuizLink">
+                Take Quiz
+              </button>
+              <button class="btn btn-outline-primary"
+                style="width:150"
+                *ngIf="!displayQuizLink"
+                [disabled]="!displayQuizLink">
+                Registeration Required
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>

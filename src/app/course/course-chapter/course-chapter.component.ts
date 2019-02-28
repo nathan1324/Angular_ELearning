@@ -10,6 +10,7 @@ export class CourseChapterComponent implements OnInit {
   pageTitle;
   course: Course;
   errorMessage: string;
+  chapters: [];
 
   constructor(private route: ActivatedRoute) { }
 
