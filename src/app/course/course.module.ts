@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseComponent } from '../course/course.component';
+import { RouterModule } from '@angular/router';
 import { CourseChapterComponent } from './course-chapter/course-chapter.component';
-import { ChapterSectionComponent } from './Course-Chapter/chapter-section/chapter-section.component';
 
 @NgModule({
-  declarations: 
+  declarations:
   [
-    CourseComponent, 
-    CourseChapterComponent, 
-    ChapterSectionComponent
+    CourseComponent,
+    CourseChapterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      { path: 'course', component: CourseComponent },
+      { path: 'course/:id', component: CourseChapterComponent}
+    ])
   ]
 })
 export class CourseModule { }
