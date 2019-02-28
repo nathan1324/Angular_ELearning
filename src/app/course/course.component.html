@@ -76,7 +76,8 @@
                 </button>
                 <button class="btn btn-outline-primary"
                   style="width:150"
-                  *ngIf="!displayQuizLink">
+                  *ngIf="!displayQuizLink"
+                  [disabled]="!displayQuizLink">
                   Registration Required
                 </button>
               </td>
