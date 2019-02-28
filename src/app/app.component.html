@@ -5,7 +5,7 @@
     <a class="navbar-brand" href="#">Team 2</a>
   <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
-      <li class="nav-item"><a class="nav-link" [routerLink]="['/Course']" routerLinkActive="active">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/course']" routerLinkActive="active">Courses</a></li>
       <li class="nav-item"><a class="nav-link" [routerLink]="['/Course']" routerLinkActive="active">My Profile</a></li>
   </ul>
   <ul class="navbar-nav ml-auto">
@@ -24,8 +24,5 @@
 </div>
 
 <div>
-    <epl-home></epl-home>
-</div>
-<div>
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
