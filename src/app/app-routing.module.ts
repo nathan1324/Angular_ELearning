@@ -14,7 +14,7 @@ const ROUTES: Routes = [
     path: '', redirectTo: 'home', pathMatch: 'full'
   },
   /* redefine path below */
-  { 
+  {
     path: '**', component: HomeComponent
   },
   /*
