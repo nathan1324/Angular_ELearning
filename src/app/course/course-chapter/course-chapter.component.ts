@@ -1,12 +1,31 @@
-import { Component } from '@angular/core';
-import { Course } from '../course';
+import { Component, OnInit } from '@angular/core';
+import { Course, CourseResolved } from '../course';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   templateUrl: './course-chapter.component.html',
   styleUrls: ['./course-chapter.component.scss']
 })
-export class CourseChapterComponent {
-  pageTitle = 'Course Chapter';
+export class CourseChapterComponent implements OnInit {
+  pageTitle;
   course: Course;
+  errorMessage: string;
 
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    const resolvedData: CourseResolved = this.route.snapshot.data.resolvedData;
+    this.errorMessage = resolvedData.error;
+
+  }
+
+  onCourseRetrieved(course: Course): void {
+    this.course = course;
+
+    if (this.course) {
+      this.pageTitle = `${this.course.courseName}`;
+    } else {
+      this.pageTitle = 'No course found';
+    }
+  }
 }

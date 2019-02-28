@@ -41,7 +41,11 @@
         <tbody>
           <tr *ngFor="let course of courses">
             <td>
-              <a [routerLink]="['/course', course.id]">
+              <a [routerLink]="['/course', course.id]"
+              *ngIf="displayCourseLink">
+                  {{course.courseName}}
+              </a>
+              <a *ngIf="!displayCourseLink">
                   {{course.courseName}}
               </a>
             </td>
@@ -53,14 +57,26 @@
             </td>
             <td>
               <button class="btn btn-outline-primary"
-                style="width:100px">
+                style="width:100px"
+                *ngIf="displayRegisterLink">
                 Register
+              </button>
+              <button class="btn btn-outline-primary"
+                style="width:150px"
+                *ngIf="!displayRegisterLink">
+                Login to Register
               </button>
             </td>
             <td>
                 <button class="btn btn-outline-primary"
-                  style="width:100px">
+                  style="width:100px"
+                  *ngIf="displayQuizLink">
                   Take Quiz
+                </button>
+                <button class="btn btn-outline-primary"
+                  style="width:150"
+                  *ngIf="!displayQuizLink">
+                  Registeration Required
                 </button>
               </td>
           </tr>
