@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     CourseModule,
     AppRoutingModule,
     UserModule,

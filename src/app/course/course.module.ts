@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseComponent } from '../course/course.component';
+import { CourseChapterComponent } from '../course/course-chapter/course-chapter.component';
 import { RouterModule } from '@angular/router';
-import { CourseChapterComponent } from './course-chapter/course-chapter.component';
+import { CourseResolver } from './course-resolver.service';
 
 @NgModule({
   declarations:
@@ -14,7 +15,11 @@ import { CourseChapterComponent } from './course-chapter/course-chapter.componen
     CommonModule,
     RouterModule.forChild([
       { path: 'course', component: CourseComponent },
-      { path: 'course/:id', component: CourseChapterComponent}
+      {
+        path: 'course/:id',
+        component: CourseChapterComponent,
+        resolve: { resolvedData: CourseResolver }
+      }
     ])
   ]
 })
