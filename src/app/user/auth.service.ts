@@ -1,11 +1,12 @@
-import { MessageService } from './../messages/message.service';
 import { Injectable } from '@angular/core';
 
 import { User } from './user';
+import { MessageService } from '../messages/message.service';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   currentUser: User;
   redirectUrl: string;

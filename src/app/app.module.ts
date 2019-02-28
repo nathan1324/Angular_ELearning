@@ -6,19 +6,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CourseModule } from './course/course.module';
+import { MessageModule } from './messages/message.module';
+import { HttpClientModule } from '@angular/common/http';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-  ],
   imports: [
     BrowserModule,
     CourseModule,
     AppRoutingModule,
-    UserModule
+    UserModule,
+    MessageModule,
+    HttpClientModule
+    // ,
+    // InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    PageNotFoundComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
