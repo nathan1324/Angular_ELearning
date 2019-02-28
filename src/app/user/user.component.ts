@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { AuthService } from './auth.service';
 
 @Component({
-  selector: 'epl-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  templateUrl: './user.component.html'
 })
-export class UserComponent implements OnInit {
+export class UserComponent {
+  errorMessage: string;
+  pageTitle = 'User';
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor(private authService: AuthService, private router: Router) { }
 }

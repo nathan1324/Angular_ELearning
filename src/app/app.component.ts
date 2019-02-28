@@ -13,7 +13,7 @@ export class AppComponent {
   isCollapsed = true;
 
   get isLoggedIn(): boolean {
-    return this.isLoggedIn;
+    return false;
   }
   constructor(private authService: AuthService, private router: Router) { }
 

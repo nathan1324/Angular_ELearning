@@ -11,6 +11,9 @@ const ROUTES: Routes = [
     path: 'home', component: HomeComponent
   },
   {
+    path: 'user', component: UserComponent
+  },
+  {
     path: '', redirectTo: 'home', pathMatch: 'full'
   },
   /* redefine path below */

@@ -1,3 +1,4 @@
+import { UserModule } from './user/user.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,7 +15,8 @@ import { CourseModule } from './course/course.module';
   imports: [
     BrowserModule,
     CourseModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

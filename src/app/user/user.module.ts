@@ -4,21 +4,24 @@ import { CommonModule } from '@angular/common';
 import { UserComponent } from '../user/user.component';
 import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [UserComponent, LoginComponent],
   imports: [
-    CommonModule,
-    FormsModule,
+    SharedModule,
     RouterModule.forChild([
       {
-        path: 'user', component: UserComponent
+        path: 'login', component: LoginComponent
       },
       {
-        path: 'login', component: UserComponent
+        path: 'user', component: UserComponent
       }
     ])
-  ]
+  ],
+  declarations: [
+    UserComponent,
+    LoginComponent
+  ],
 })
 export class UserModule { }

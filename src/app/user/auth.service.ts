@@ -32,7 +32,7 @@ export class AuthService {
     }
     this.currentUser = {
       id: 2,
-      userName: userName,
+       userName: userName,
       isAdmin: false
     };
     this.messageService.addMessage(`User: ${this.currentUser.userName} logged in`);

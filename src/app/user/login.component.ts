@@ -4,9 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Component({
-  selector: 'epl-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  templateUrl: './login.component.html'
 })
 export class LoginComponent {
   errorMessage: string;
