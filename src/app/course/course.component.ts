@@ -29,7 +29,7 @@ export class CourseComponent {
     },
     {
       id: 4,
-      courseName: 'Course 1',
+      courseName: 'Course 4',
       courseCode: 'C401',
       description: 'This is an expert level course'
     }
