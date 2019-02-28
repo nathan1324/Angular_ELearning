@@ -2,13 +2,38 @@
     <div class="card-header">
       {{pageTitle}}
     </div>
+
     <div class="card-body">
-      <div class="container-fluid">
-        <div class="text-center">Course chapter component</div>
-        <div class="text-center">
-          <h3>Course chapter component</h3>
-        </div>
-        <div class="text-center">Course chapter component</div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-3">Name:</div>
+            <div class="col-md-6">{{course.courseName}}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">Code:</div>
+            <div class="col-md-6">{{course.courseCode}}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">Description:</div>
+            <div class="col-md-6">{{course.description}}</div>
+          </div>
+      </div>
+
+      <div class="col-md-4">
+
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <button class="btn btn-outline-secondary mr-3"
+                style="width:80px"
+                [routerLink]="['/course']"
+                queryParamsHandling='preserve'>
+          <i class="fa fa-chevron-left"></i> Back
+        </button>
       </div>
     </div>
   </div>
+</div>

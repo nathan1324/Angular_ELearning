@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Course } from '../course';
 
 @Component({
   templateUrl: './course-chapter.component.html',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class CourseChapterComponent {
   pageTitle = 'Course Chapter';
+  course: Course;
 
 }
