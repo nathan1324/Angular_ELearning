@@ -1,10 +1,10 @@
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserComponent } from '../user/user.component';
 import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { MyProfileComponent } from './my-profile.component';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   declarations: [
     LoginComponent,
-    UserComponent
+    MyProfileComponent
   ],
 })
 export class UserModule { }
