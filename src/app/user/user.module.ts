@@ -5,6 +5,7 @@ import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { MyProfileComponent } from './my-profile.component';
+import { UserCourseComponent } from './user-course/user-course.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MyProfileComponent } from './my-profile.component';
   ],
   declarations: [
     LoginComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    UserCourseComponent
   ],
 })
 export class UserModule { }
