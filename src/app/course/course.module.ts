@@ -4,15 +4,21 @@ import { CourseComponent } from '../course/course.component';
 import { CourseChapterComponent } from '../course/course-chapter/course-chapter.component';
 import { RouterModule } from '@angular/router';
 import { CourseResolver } from './course-resolver.service';
+import { SharedModule } from '../shared/shared.module';
+import { CourseChapterContentComponent } from './course-chapter/course-chapter-content.component';
+import { ChapterSectionComponent } from './course-chapter/chapter-section/chapter-section.component';
+
 
 @NgModule({
   declarations:
   [
     CourseComponent,
-    CourseChapterComponent
+    CourseChapterComponent,
+    CourseChapterContentComponent,
+    ChapterSectionComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule.forChild([
       { path: 'course', component: CourseComponent },
       {

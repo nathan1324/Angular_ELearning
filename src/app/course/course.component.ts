@@ -1,48 +1,51 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Course } from './course';
+import { CourseService } from './course.service';
+import { filter } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss']
 })
-export class CourseComponent {
+export class CourseComponent implements OnInit {
   pageTitle = 'Course Catalog';
   displayCourseLink = true;
-  displayRegisterLink = false;
-  displayQuizLink = false;
+  displayRegisterLink = true;
+  displayQuizLink = true;
+  errorMessage = '';
 
-  courses: Course[] = [
-    {
-      id: 1,
-      courseName: 'Course 1',
-      courseCode: 'C101',
-      description: 'This is an intro level course',
-      totalChapters: 2,
-      totalChapterSections: 2
-    },
-    {
-      id: 2,
-      courseName: 'Course 2',
-      courseCode: 'C201',
-      description: 'This is an intermediate level course',
-      totalChapters: 3,
-      totalChapterSections: 3
-    },
-    {
-      id: 3,
-      courseName: 'Course 3',
-      courseCode: 'C301',
-      description: 'This is an advanced level course',
-      totalChapters: 4,
-      totalChapterSections: 4
-    },
-    {
-      id: 4,
-      courseName: 'Course 4',
-      courseCode: 'C401',
-      description: 'This is an expert level course',
-      totalChapters: 4,
-      totalChapterSections: 4
-    }
-  ];
+  _listFilter = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredCourses = this.listFilter ? this.performFilter(this.listFilter) : this.courses;
+  }
+
+  filteredCourses: Course[] = [];
+  courses: Course[] = [];
+
+  constructor(private courseService: CourseService,
+              private route: ActivatedRoute) { }
+
+  performFilter(filterBy: string): Course[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.courses.filter((course: Course) =>
+      course.courseName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+  }
+
+  ngOnInit(): void {
+    this.listFilter = this.route.snapshot.queryParamMap.get('filterBy') || '';
+
+    this.courseService.getCourses().subscribe(
+      courses => {
+        this.courses = courses;
+        this.filteredCourses = this.courses;
+      },
+      error => this.errorMessage =  error as any
+    );
+  }
 }
