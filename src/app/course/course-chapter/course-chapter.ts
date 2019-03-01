@@ -1,4 +1,7 @@
+import { ChapterSection } from './chapter-section/chapter-section';
+
 export interface CourseChapter {
-  id: number;
+  chapterId: number;
   chapterName: string;
+  chapterSection: ChapterSection[];
 }

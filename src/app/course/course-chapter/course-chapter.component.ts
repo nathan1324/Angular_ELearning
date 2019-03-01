@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Course, CourseResolved } from '../course';
 import { ActivatedRoute } from '@angular/router';
+import { CourseComponent } from '../course.component';
+import { CourseService } from '../course.service';
 
 @Component({
   templateUrl: './course-chapter.component.html',
@@ -10,9 +12,12 @@ export class CourseChapterComponent implements OnInit {
   pageTitle;
   course: Course;
   errorMessage: string;
-  //chapters: [];
 
-  constructor(private route: ActivatedRoute) { }
+
+  constructor(public courseService: CourseService,
+              public route: ActivatedRoute) {
+      //super(courseService, route);
+     }
 
   ngOnInit(): void {
     const resolvedData: CourseResolved = this.route.snapshot.data.resolvedData;
