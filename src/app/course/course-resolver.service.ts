@@ -23,7 +23,7 @@ export class CourseResolver implements Resolve<CourseResolved> {
     }
     return this.courseService.getCourse(+id)
     .pipe(
-      map(course => ({course: course})),
+      map(course => ({course})),
       catchError(error => {
         const message = `Retrieval error: ${error}`;
         console.error(message);
@@ -31,4 +31,4 @@ export class CourseResolver implements Resolve<CourseResolved> {
       })
     );
   }
- }
+}

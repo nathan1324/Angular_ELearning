@@ -3,6 +3,7 @@ import { Course, CourseResolved } from '../course';
 import { ActivatedRoute } from '@angular/router';
 import { CourseComponent } from '../course.component';
 import { CourseService } from '../course.service';
+import { CourseChapter } from './course-chapter';
 
 @Component({
   templateUrl: './course-chapter.component.html',
@@ -15,9 +16,7 @@ export class CourseChapterComponent implements OnInit {
 
 
   constructor(public courseService: CourseService,
-              public route: ActivatedRoute) {
-      //super(courseService, route);
-     }
+              public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const resolvedData: CourseResolved = this.route.snapshot.data.resolvedData;

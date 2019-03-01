@@ -4,12 +4,14 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
 import { Course } from './course';
+import { CourseChapter } from './course-chapter/course-chapter';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
   private courseUrl = 'api/courses';
+  private chapterUrl = 'api/chapters';
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +25,19 @@ export class CourseService {
   getCourse(id: number): Observable<Course | undefined> {
     return this.getCourses().pipe(
       map((courses: Course[]) => courses.find(c => c.id === id))
+    );
+  }
+
+  getChapters(): Observable<CourseChapter[]> {
+    return this.http.get<CourseChapter[]>(this.chapterUrl).pipe(
+      tap(data => console.log('All: ' + JSON.stringify(data))),
+      catchError(this.handleError)
+    );
+  }
+
+  getChapter(id: number): Observable<CourseChapter | undefined> {
+    return this.getChapters().pipe(
+      map((chapters: CourseChapter[]) => chapters.find(c => c.chapterId === id))
     );
   }
 

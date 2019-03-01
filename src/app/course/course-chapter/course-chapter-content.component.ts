@@ -10,8 +10,9 @@ import { Course } from '../course';
   styleUrls: ['./course-chapter-content.component.scss']
 })
 export class CourseChapterContentComponent extends CourseComponent implements OnInit {
-
+  pageTitle;
   course: Course;
+  errorMessage: string;
 
   constructor(public courseService: CourseService,
               public route: ActivatedRoute) {
@@ -19,6 +20,8 @@ export class CourseChapterContentComponent extends CourseComponent implements On
 }
 
   ngOnInit() {
+
   }
+
 
 }

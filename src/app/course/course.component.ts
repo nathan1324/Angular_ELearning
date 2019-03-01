@@ -16,6 +16,7 @@ export class CourseComponent implements OnInit {
   displayQuizLink = true;
   errorMessage = '';
 
+// tslint:disable-next-line: variable-name
   _listFilter = '';
   get listFilter(): string {
     return this._listFilter;

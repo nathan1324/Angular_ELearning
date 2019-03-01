@@ -5,7 +5,6 @@ export interface Course {
   courseName: string;
   courseCode: string;
   description: string;
-  chapter: CourseChapter[];
 }
 
 export interface CourseResolved {
