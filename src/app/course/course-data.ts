@@ -35,6 +35,14 @@ export class CourseData implements InMemoryDbService {
         description: 'This is an expert level course',
         totalChapters: 4,
         totalChapterSections: 4
+      },
+      {
+        id: 5,
+        courseName: 'Angular Basics',
+        courseCode: 'ANG-101',
+        description: 'Learn angular basics',
+        totalChapters: 4,
+        totalChapterSections: 4
       }
     ];
     return { courses };

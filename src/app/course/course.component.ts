@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from './course';
 import { CourseService } from './course.service';
 import { filter } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   templateUrl: './course.component.html',
@@ -27,7 +28,8 @@ export class CourseComponent implements OnInit {
   filteredCourses: Course[] = [];
   courses: Course[] = [];
 
-  constructor(private courseService: CourseService) { }
+  constructor(private courseService: CourseService,
+              private route: ActivatedRoute) { }
 
   performFilter(filterBy: string): Course[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -36,6 +38,8 @@ export class CourseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.listFilter = this.route.snapshot.queryParamMap.get('filterBy') || '';
+
     this.courseService.getCourses().subscribe(
       courses => {
         this.courses = courses;

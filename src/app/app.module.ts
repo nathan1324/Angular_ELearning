@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CourseData } from './course/course-data';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
