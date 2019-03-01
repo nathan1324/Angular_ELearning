@@ -10,16 +10,18 @@ import { MessageModule } from './messages/message.module';
 import { HttpClientModule } from '@angular/common/http';
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { QuizModule } from './quiz/quiz.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     CourseModule,
-    AppRoutingModule,
     UserModule,
     MessageModule,
-    HttpClientModule
+    HttpClientModule,
+    QuizModule,
+    AppRoutingModule,
     // ,
     // InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
   ],
