@@ -8,20 +8,19 @@ import { HomeComponent } from './home/home.component';
 import { CourseModule } from './course/course.module';
 import { MessageModule } from './messages/message.module';
 import { HttpClientModule } from '@angular/common/http';
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { CourseData } from './course/course-data';
 
 @NgModule({
   imports: [
     BrowserModule,
-    HttpClientModule,
     CourseModule,
     AppRoutingModule,
     UserModule,
     MessageModule,
-    HttpClientModule
-    // ,
-    // InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(CourseData, { delay: 1000 }),
   ],
   declarations: [
     AppComponent,

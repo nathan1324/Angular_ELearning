@@ -9,7 +9,7 @@ import { Course } from './course';
   providedIn: 'root'
 })
 export class CourseService {
-  private courseUrl = 'api/courses/courses.json';
+  private courseUrl = 'api/courses';
 
   constructor(private http: HttpClient) { }
 
