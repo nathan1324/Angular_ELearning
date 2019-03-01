@@ -10,13 +10,14 @@ export class CourseChapterComponent implements OnInit {
   pageTitle;
   course: Course;
   errorMessage: string;
-  chapters: [];
+  //chapters: [];
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const resolvedData: CourseResolved = this.route.snapshot.data.resolvedData;
     this.errorMessage = resolvedData.error;
+    this.onCourseRetrieved(resolvedData.course);
 
   }
 

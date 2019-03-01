@@ -6,33 +6,33 @@ export class CourseData implements InMemoryDbService {
     const courses: Course[] = [
       {
         id: 1,
-        courseName: 'Course 1',
-        courseCode: 'C101',
-        description: 'This is an intro level course',
+        courseName: 'Introduction to Algebra',
+        courseCode: 'MTH-101',
+        description: 'Learn the basics of Algebra',
         totalChapters: 2,
         totalChapterSections: 2
       },
       {
         id: 2,
-        courseName: 'Course 2',
-        courseCode: 'C201',
-        description: 'This is an intermediate level course',
+        courseName: 'Advanced Algebra',
+        courseCode: 'MTH-102',
+        description: 'Explore more Algebra',
         totalChapters: 3,
         totalChapterSections: 3
       },
       {
         id: 3,
-        courseName: 'Course 3',
-        courseCode: 'C301',
-        description: 'This is an advanced level course',
+        courseName: 'Introduction to Calculus',
+        courseCode: 'MTH-301',
+        description: 'Learn the basics of Calculus',
         totalChapters: 4,
         totalChapterSections: 4
       },
       {
         id: 4,
-        courseName: 'Course 4',
-        courseCode: 'C401',
-        description: 'This is an expert level course',
+        courseName: 'Driver Education',
+        courseCode: 'CAR-101',
+        description: 'Learn to drive',
         totalChapters: 4,
         totalChapterSections: 4
       },
