@@ -9,40 +9,35 @@ export class CourseData implements InMemoryDbService {
         courseName: 'Introduction to Algebra',
         courseCode: 'MTH-101',
         description: 'Learn the basics of Algebra',
-        totalChapters: 2,
-        totalChapterSections: 2
+        chapter: []
       },
       {
         id: 2,
         courseName: 'Advanced Algebra',
         courseCode: 'MTH-102',
         description: 'Explore more Algebra',
-        totalChapters: 3,
-        totalChapterSections: 3
+        chapter: []
       },
       {
         id: 3,
         courseName: 'Introduction to Calculus',
         courseCode: 'MTH-301',
         description: 'Learn the basics of Calculus',
-        totalChapters: 4,
-        totalChapterSections: 4
+        chapter: []
       },
       {
         id: 4,
         courseName: 'Driver Education',
         courseCode: 'CAR-101',
         description: 'Learn to drive',
-        totalChapters: 4,
-        totalChapterSections: 4
+        chapter: []
       },
       {
         id: 5,
         courseName: 'Angular Basics',
         courseCode: 'ANG-101',
         description: 'Learn angular basics',
-        totalChapters: 4,
-        totalChapterSections: 4
+        chapter: []
       }
     ];
     return { courses };
