@@ -9,13 +9,10 @@ import { CourseModule } from './course/course.module';
 import { MessageModule } from './messages/message.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found.component';
-<<<<<<< HEAD
 import { QuizModule } from './quiz/quiz.module';
-=======
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CourseData } from './course/course-data';
 import { FormsModule } from '@angular/forms';
->>>>>>> a095e8bca4fc56a260ff33941a341ea4b982ba3a
 
 @NgModule({
   imports: [
@@ -24,14 +21,11 @@ import { FormsModule } from '@angular/forms';
     UserModule,
     MessageModule,
     HttpClientModule,
-<<<<<<< HEAD
     QuizModule,
     AppRoutingModule,
     // ,
     // InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
-=======
     HttpClientInMemoryWebApiModule.forRoot(CourseData, { delay: 1000 }),
->>>>>>> a095e8bca4fc56a260ff33941a341ea4b982ba3a
   ],
   declarations: [
     AppComponent,
