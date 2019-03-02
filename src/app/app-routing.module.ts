@@ -11,11 +11,9 @@ const ROUTES: Routes = [
   {
     path: 'home', component: HomeComponent
   },
-
-  /*{
-    path: 'quiz', component: QuizComponent
-  }, */
-
+  {
+    path: '', redirectTo: 'home', pathMatch: 'full'
+  },
   {
     path: '',
     children: [
@@ -27,9 +25,7 @@ const ROUTES: Routes = [
       }
     ]
   },
-  {
-    path: '', redirectTo: 'home', pathMatch: 'full'
-  },
+  
   {
     path: '**', component: PageNotFoundComponent
   },
