@@ -6,7 +6,6 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { LoginComponent } from './user/login.component';
 import { QuizComponent } from './quiz/quiz.component';
 
-
 const ROUTES: Routes = [
   {
     path: 'home', component: HomeComponent
@@ -25,7 +24,6 @@ const ROUTES: Routes = [
       }
     ]
   },
-  
   {
     path: '**', component: PageNotFoundComponent
   },
