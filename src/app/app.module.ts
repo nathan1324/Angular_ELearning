@@ -9,19 +9,23 @@ import { CourseModule } from './course/course.module';
 import { MessageModule } from './messages/message.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { QuizModule } from './quiz/quiz.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { CourseData } from './course/course-data';
+import { MockData } from './mock-data';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
     CourseModule,
-    AppRoutingModule,
     UserModule,
     MessageModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(CourseData, { delay: 1000 }),
+    QuizModule,
+    AppRoutingModule,
+    // ,
+    // InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
+    HttpClientInMemoryWebApiModule.forRoot(MockData, { delay: 1000 }),
   ],
   declarations: [
     AppComponent,

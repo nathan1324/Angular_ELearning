@@ -4,6 +4,7 @@ import { CourseService } from './course.service';
 import { filter } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss']
@@ -11,10 +12,9 @@ import { ActivatedRoute } from '@angular/router';
 export class CourseComponent implements OnInit {
   pageTitle = 'Course Catalog';
   displayCourseLink = true;
-  displayRegisterLink = true;
-  displayQuizLink = true;
   errorMessage = '';
 
+// tslint:disable-next-line: variable-name
   _listFilter = '';
   get listFilter(): string {
     return this._listFilter;
@@ -28,8 +28,8 @@ export class CourseComponent implements OnInit {
   filteredCourses: Course[] = [];
   courses: Course[] = [];
 
-  constructor(private courseService: CourseService,
-              private route: ActivatedRoute) { }
+  constructor(public courseService: CourseService,
+              public route: ActivatedRoute) { }
 
   performFilter(filterBy: string): Course[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -39,6 +39,7 @@ export class CourseComponent implements OnInit {
 
   ngOnInit(): void {
     this.listFilter = this.route.snapshot.queryParamMap.get('filterBy') || '';
+
 
     this.courseService.getCourses().subscribe(
       courses => {

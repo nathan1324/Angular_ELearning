@@ -4,10 +4,27 @@
   </div>
 
   <div class="card-body">
-    <!--Loop through all chapters and display-->
+    <!--Loop through all chapters and display
     <epl-course-chapter-content></epl-course-chapter-content>
-    <epl-course-chapter-content></epl-course-chapter-content>
-    <epl-course-chapter-content></epl-course-chapter-content>
+    -->
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-3">Name:</div>
+            <div class="col-md-6">{{course.courseName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Code:</div>
+            <div class="col-md-6">{{course.courseCode}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Description:</div>
+            <div class="col-md-6">{{course.description}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
   </div>
 
   <div class="row mt-4">
@@ -18,6 +35,28 @@
               queryParamsHandling='preserve'>
         <i class="fa fa-chevron-left"></i> Back
       </button>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-outline-primary"
+          style="width:100px"
+          *ngIf="displayRegisterLink"
+          (click)="loadCourse()">
+            Register
+        </button>
+        <button class="btn btn-outline-primary"
+          style="width:150px"
+          *ngIf="!displayRegisterLink"
+          [routerLink]="['/login']">
+            Login to Register
+        </button>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-outline-primary"
+          style="width:150px"
+          *ngIf="displayCourseLink"
+          [routerLink]="['/course', course.id, 'chapter']">
+            Load Course
+        </button>
     </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Course, CourseResolved } from '../course';
 import { ActivatedRoute } from '@angular/router';
+import { CourseComponent } from '../course.component';
+import { CourseService } from '../course.service';
+import { CourseChapter } from './course-chapter';
 
 @Component({
   templateUrl: './course-chapter.component.html',
@@ -10,14 +13,18 @@ export class CourseChapterComponent implements OnInit {
   pageTitle;
   course: Course;
   errorMessage: string;
-  //chapters: [];
+  displayRegisterLink = true;
+  displayCourseLink = false;
 
-  constructor(private route: ActivatedRoute) { }
+
+
+  constructor(public courseService: CourseService,
+              public route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const resolvedData: CourseResolved = this.route.snapshot.data.resolvedData;
-    this.errorMessage = resolvedData.error;
-    this.onCourseRetrieved(resolvedData.course);
+    const courseResolvedData: CourseResolved = this.route.snapshot.data.resolvedData;
+    this.errorMessage = courseResolvedData.error;
+    this.onCourseRetrieved(courseResolvedData.course);
 
   }
 
@@ -25,9 +32,13 @@ export class CourseChapterComponent implements OnInit {
     this.course = course;
 
     if (this.course) {
-      this.pageTitle = `${this.course.courseName}`;
+      this.pageTitle = `Course Details - ${this.course.courseName}`;
     } else {
       this.pageTitle = 'No course found';
     }
+  }
+
+  loadCourse(): void {
+    this.displayCourseLink = !this.displayCourseLink;
   }
 }

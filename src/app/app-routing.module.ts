@@ -4,12 +4,19 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { LoginComponent } from './user/login.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 
 const ROUTES: Routes = [
   {
     path: 'home', component: HomeComponent
   },
+
+  /*{
+    path: 'quiz', component: QuizComponent
+  }, */
+
+ 
   {
     path: '',
     children: [
@@ -21,6 +28,8 @@ const ROUTES: Routes = [
       }
     ]
   },
+
+ 
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
   },
