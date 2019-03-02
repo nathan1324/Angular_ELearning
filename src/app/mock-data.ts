@@ -1,9 +1,9 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Course } from './course';
-import { CourseChapter } from './course-chapter/course-chapter';
-import { ChapterSection } from './course-chapter/chapter-section/chapter-section';
+import { Course } from './course/course';
+import { CourseChapter } from './course/course-chapter/course-chapter';
+import { ChapterSection } from './course/course-chapter/chapter-section/chapter-section';
 
-export class CourseData implements InMemoryDbService {
+export class MockData implements InMemoryDbService {
   createDb() {
     const courses: Course[] = [
       {

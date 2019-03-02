@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class QuizComponent implements OnInit {
   title: string;
 
-  constructor(){
+  constructor() {
     this.title = 'Quiz';
   }
 

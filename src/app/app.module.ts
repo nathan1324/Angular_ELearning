@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { QuizModule } from './quiz/quiz.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { CourseData } from './course/course-data';
+import { MockData } from './mock-data';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -25,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     // ,
     // InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
-    HttpClientInMemoryWebApiModule.forRoot(CourseData, { delay: 1000 }),
+    HttpClientInMemoryWebApiModule.forRoot(MockData, { delay: 1000 }),
   ],
   declarations: [
     AppComponent,
