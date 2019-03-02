@@ -37,7 +37,7 @@ export class CourseService {
 
   getChapter(id: number): Observable<CourseChapter | undefined> {
     return this.getChapters().pipe(
-      map((chapters: CourseChapter[]) => chapters.find(c => c.chapterId === id))
+      map((chapters: CourseChapter[]) => chapters.find(c => c.courseId === id))
     );
   }
 
