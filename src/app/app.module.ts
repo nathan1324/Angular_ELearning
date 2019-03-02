@@ -9,6 +9,7 @@ import { CourseModule } from './course/course.module';
 import { MessageModule } from './messages/message.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { QuizModule } from './quiz/quiz.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CourseData } from './course/course-data';
 import { FormsModule } from '@angular/forms';
@@ -17,10 +18,13 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     CourseModule,
-    AppRoutingModule,
     UserModule,
     MessageModule,
     HttpClientModule,
+    QuizModule,
+    AppRoutingModule,
+    // ,
+    // InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     HttpClientInMemoryWebApiModule.forRoot(CourseData, { delay: 1000 }),
   ],
   declarations: [
