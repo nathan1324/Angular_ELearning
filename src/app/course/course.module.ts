@@ -31,6 +31,10 @@ import { ChapterResolver } from './chapter-resolver.service';
         path: 'course/:id/chapter',
         component: CourseChapterContentComponent,
         resolve: { resolvedData: ChapterResolver }
+      },
+      {
+        path: 'course/:id/chapter/:chapterId',
+        component: ChapterSectionComponent
       }
     ])
   ]

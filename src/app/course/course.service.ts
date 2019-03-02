@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, tap, map } from 'rxjs/operators';
+import { catchError, tap, map, filter } from 'rxjs/operators';
 
 import { Course } from './course';
 import { CourseChapter } from './course-chapter/course-chapter';
@@ -35,9 +35,16 @@ export class CourseService {
     );
   }
 
+
+  //getChapterByCourse(id: number): Observable<CourseChapter | undefined> {
+  //  return this.getChapters().pipe(
+  //   filter(chapter => chapter.)
+  //  );
+  //}
+
   getChapter(id: number): Observable<CourseChapter | undefined> {
     return this.getChapters().pipe(
-      map((chapters: CourseChapter[]) => chapters.find(c => c.courseId === id))
+      map((chapters: CourseChapter[]) => chapters.find(c => c.chapterId === id))
     );
   }
 
