@@ -16,7 +16,6 @@ const ROUTES: Routes = [
     path: 'quiz', component: QuizComponent
   }, */
 
- 
   {
     path: '',
     children: [
@@ -28,26 +27,12 @@ const ROUTES: Routes = [
       }
     ]
   },
-
- 
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
   },
-  /* redefine path below */
   {
     path: '**', component: PageNotFoundComponent
   },
-  /*
-  {
-    path: 'course', component: CourseComponent
-  },
-  {
-    path: 'user', component: UserComponent
-  },
-  {
-    path: 'login', component: LoginComponent
-  },
-  */
 ];
 
 @NgModule({
