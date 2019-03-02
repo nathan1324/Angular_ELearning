@@ -3,9 +3,6 @@
       {{pageTitle}}
     </div>
     <div class="card-body">
-      <!--Loop through all sections and display
-      <epl-chapter-section></epl-chapter-section>
-      -->
       <div class="table-responsive">
           <table class="table mb-0">
             <thead>
@@ -18,7 +15,9 @@
             <tbody>
               <tr *ngFor="let chapter of chapters">
                 <td>
-                  Chapter {{chapter.chapterId}}
+                  <a [routerLink]="['/course', 1, 'chapter', chapter.chapterId]">
+                      Chapter {{chapter.chapterId}}
+                  </a>
                 </td>
             </tbody>
           </table>

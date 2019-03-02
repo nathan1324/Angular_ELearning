@@ -24,8 +24,6 @@ export class CourseChapterContentComponent implements OnInit {
     const chapterResolvedData: ChapterResolved = this.route.snapshot.data.resolvedData;
     this.errorMessage = chapterResolvedData.error;
     this.onChapterRetrieved(chapterResolvedData.chapter);
-
-    console.log('course-chapter-content.component');
   }
 
   onChapterRetrieved(chapter: CourseChapter): void {
