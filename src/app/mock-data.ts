@@ -40,18 +40,43 @@ export class MockData implements InMemoryDbService {
     const chapters: CourseChapter[] = [
       {
         chapterId: 1,
-        chapterName: 'Algebra - Chapter 1',
+        chapterName: 'Introduction to Algebra - Chapter 1',
         courseId: 1
       },
       {
         chapterId: 2,
-        chapterName: 'Algebra - Chapter 2',
+        chapterName: 'Introduction to Algebra - Chapter 2',
         courseId: 1
       },
       {
         chapterId: 3,
-        chapterName: 'Algebra - Chapter 3',
+        chapterName: 'Introduction to Algebra - Chapter 3',
         courseId: 1
+      },
+      {
+        chapterId: 4,
+        chapterName: 'Advanced Algebra - Chapter 1',
+        courseId: 2
+      },
+      {
+        chapterId: 5,
+        chapterName: 'Advanced Algebra - Chapter 2',
+        courseId: 2
+      },
+      {
+        chapterId: 6,
+        chapterName: 'Advanced Algebra - Chapter 3',
+        courseId: 2
+      },
+      {
+        chapterId: 7,
+        chapterName: 'Advanced Algebra - Chapter 4',
+        courseId: 2
+      },
+      {
+        chapterId: 8,
+        chapterName: 'Advanced Algebra - Chapter 5',
+        courseId: 2
       },
     ];
     const sections: ChapterSection[] = [
