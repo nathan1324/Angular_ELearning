@@ -1,3 +1,4 @@
+import { MockData } from './mock-data';
 import { UserModule } from './user/user.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { QuizModule } from './quiz/quiz.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { MockData } from './mock-data';
+import { MatTabsModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

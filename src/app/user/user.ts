@@ -2,5 +2,6 @@
 export interface User {
   id: number;
   userName: string;
-  isAdmin: boolean;
+  password: string,
+  isStudent: boolean;
 }

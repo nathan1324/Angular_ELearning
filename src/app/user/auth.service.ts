@@ -26,7 +26,8 @@ export class AuthService {
       this.currentUser = {
         id: 1,
         userName,
-        isAdmin: true
+        password,
+        isStudent: false
       };
       this.messageService.addMessage('Admin login');
       return;
@@ -34,7 +35,8 @@ export class AuthService {
     this.currentUser = {
       id: 2,
        userName,
-      isAdmin: false
+       password,
+       isStudent: true
     };
     this.messageService.addMessage(`User: ${this.currentUser.userName} logged in`);
   }
