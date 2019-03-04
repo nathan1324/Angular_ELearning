@@ -40,17 +40,17 @@ div.card-header {
 
 .pimg1{
   background-image:url('./app/img/image1.jpg');
-  min-height:100%;
+  min-height:45%;
 }
 
 .pimg2{
   background-image:url('./app/img/image2.jpg');
-  min-height:400px;
+  min-height:350px;
 }
 
 .pimg3{
   background-image:url('./app/img/image3.jpg');
-  min-height:400px;
+  min-height:300px;
 }
 
 .section{
@@ -70,7 +70,7 @@ div.card-header {
 
 .ptext{
   position:absolute;
-  top:50%;
+  top:45%;
   width:100%;
   text-align:center;
   color:#000;
@@ -82,7 +82,7 @@ div.card-header {
 .ptext .border{
   background-color:#111;
   color:#fff;
-  padding:20px;
+  padding:1px;
 }
 
 .ptext .border.trans{

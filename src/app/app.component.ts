@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from './user/auth.service';
 import { Router } from '@angular/router';
+import {} from 
 
 @Component({
   selector: 'epl-root',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'E-Learning Portal';
   isCollapsed = false;
+  authUser: string = this.authService.currentUser.userName;
 
   get isLoggedIn(): boolean {
     return this.authService.isLoggedIn;
