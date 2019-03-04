@@ -2,6 +2,23 @@
   <div class="card-header">
     {{pageTitle}}
   </div>
+  <!-- <nav mat-tab-nav-bar>
+      <a mat-tab-link
+         *ngFor="let link of navLinks"
+         [routerLink]="link.path"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+        {{link.label}}
+      </a>
+    </nav> -->
+    <mat-tab-group>
+      <mat-tab label="My Courses">
+        <epl-user-course></epl-user-course>
+        <p>...</p>
+      </mat-tab>
+      <mat-tab label="Two">
+        <h1>Some more tab content</h1>
+        <p>...</p>
+      </mat-tab>
+    </mat-tab-group>
 <router-outlet></router-outlet>
-
-</div>

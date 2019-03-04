@@ -6,20 +6,28 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { MyProfileComponent } from './my-profile.component';
 import { UserCourseComponent } from './user-course/user-course.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material';
+
 
 
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule
-    // RouterModule.forChild([
-    //   {
-    //     path: 'login', component: LoginComponent
-    //   },
-    //   {
-    //     path: 'user', component: UserComponent
-    //   }
-    // ])
+    BrowserAnimationsModule,
+    MatTabsModule,
+    RouterModule.forChild([
+      { path: '',
+        component: UserModule
+    },
+      { path: 'user-course', component: UserCourseComponent }
+      // ,{
+      //   path: 'products/:id',
+      //   component: ProductDetailComponent,
+      //    resolve: { resolvedData: ProductResolver}
+      // },
+      // { path: 'products/:id/edit', component: ProductEditComponent }
+    ])
   ],
   declarations: [
     LoginComponent,
