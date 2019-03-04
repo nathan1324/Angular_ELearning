@@ -1,13 +1,7 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Course } from './course/course';
-<<<<<<< HEAD
-import { User } from './user/user';
-import { UserCourse } from './user/user-course/user-course';
-
-=======
 import { CourseChapter } from './course/course-chapter/course-chapter';
 import { ChapterSection } from './course/course-chapter/chapter-section/chapter-section';
->>>>>>> 72a98ac75d6955b7812a1fbc83f891cd884dc991
 
 export class MockData implements InMemoryDbService {
   createDb() {
@@ -16,79 +10,30 @@ export class MockData implements InMemoryDbService {
         id: 1,
         courseName: 'Introduction to Algebra',
         courseCode: 'MTH-101',
-<<<<<<< HEAD
-        description: 'Learn the basics of Algebra',
-        chapter: []
-=======
         description: 'Learn the basics of Algebra'
->>>>>>> 72a98ac75d6955b7812a1fbc83f891cd884dc991
       },
       {
         id: 2,
         courseName: 'Advanced Algebra',
         courseCode: 'MTH-102',
-<<<<<<< HEAD
-        description: 'Explore more Algebra',
-        chapter: []
-=======
         description: 'Explore more Algebra'
->>>>>>> 72a98ac75d6955b7812a1fbc83f891cd884dc991
       },
       {
         id: 3,
         courseName: 'Introduction to Calculus',
         courseCode: 'MTH-301',
-<<<<<<< HEAD
-        description: 'Learn the basics of Calculus',
-        chapter: []
-=======
         description: 'Learn the basics of Calculus'
->>>>>>> 72a98ac75d6955b7812a1fbc83f891cd884dc991
       },
       {
         id: 4,
         courseName: 'Driver Education',
         courseCode: 'CAR-101',
-<<<<<<< HEAD
-        description: 'Learn to drive',
-        chapter: []
-=======
         description: 'Learn to drive'
->>>>>>> 72a98ac75d6955b7812a1fbc83f891cd884dc991
       },
       {
         id: 5,
         courseName: 'Angular Basics',
         courseCode: 'ANG-101',
-<<<<<<< HEAD
-        description: 'Learn angular basics',
-        chapter: []
-      }
-    ];
-    const users: User[] = [
-      {
-        id: 1,
-        userName: 'user1',
-        password: '123',
-        isStudent: true
-      }
-    ];
-    const userCourses: UserCourse[] = [
-      {
-        userID: 1,
-        courseID: 1
-      },
-      {
-        userID: 1,
-        courseID: 2
-      },
-      {
-        userID: 1,
-        courseID: 3
-      }
-    ];
-    return { courses, users, userCourses };
-=======
         description: 'Learn angular basics'
       }
     ];
@@ -155,6 +100,5 @@ export class MockData implements InMemoryDbService {
       },
     ];
     return { courses, chapters, sections };
->>>>>>> 72a98ac75d6955b7812a1fbc83f891cd884dc991
   }
 }

@@ -11,11 +11,8 @@
   },
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@angular/animation": "^4.0.0-beta.8",
-=======
     "@angular-devkit/schematics-cli": "^0.13.4",
->>>>>>> 72a98ac75d6955b7812a1fbc83f891cd884dc991
     "@angular/animations": "~7.2.0",
     "@angular/cdk": "^7.3.3",
     "@angular/common": "~7.2.0",
