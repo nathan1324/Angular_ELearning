@@ -12,10 +12,9 @@ import { ActivatedRoute } from '@angular/router';
 export class CourseComponent implements OnInit {
   pageTitle = 'Course Catalog';
   displayCourseLink = true;
-  displayRegisterLink = true;
-  displayQuizLink = true;
   errorMessage = '';
 
+// tslint:disable-next-line: variable-name
   _listFilter = '';
   get listFilter(): string {
     return this._listFilter;

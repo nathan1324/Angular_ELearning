@@ -1,9 +1,26 @@
 <div class="card">
     <div class="card-header">
-        Chapter 'x'
+      {{pageTitle}}
     </div>
     <div class="card-body">
-      <!--Loop through all sections and display-->
-      <epl-chapter-section></epl-chapter-section>
+      <div class="table-responsive">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>
+                  Table of Contents
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let chapter of chapters">
+                <td>
+                  <a [routerLink]="['/course', 1, 'chapter', chapter.chapterId]">
+                      Chapter {{chapter.chapterId}}
+                  </a>
+                </td>
+            </tbody>
+          </table>
+        </div>
     </div>
 </div>
