@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>
+                  Table of Contents
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let chapter of chapters">
+                <td>
+                  <a [routerLink]="['/course', 1, 'chapter', chapter.chapterId]">
+                      Chapter {{chapter.chapterId}}
+                  </a>
+                </td>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
